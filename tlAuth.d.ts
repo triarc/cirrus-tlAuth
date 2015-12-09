@@ -6,9 +6,9 @@ declare module Triarc.Auth {
 }
 declare module Triarc.Auth {
     interface IAuthProxy {
-        logout(): ng.IPromise<any>;
-        login(data: ILoginViewModel): ng.IPromise<Triarc.Data.DataResponse<any>>;
-        getAppUser<TAppUser>(): ng.IPromise<Triarc.Data.DataResponse<TAppUser>>;
+        logout(): angular.IPromise<any>;
+        login(data: ILoginViewModel): angular.IPromise<Triarc.Data.DataResponse<any>>;
+        getAppUser<TAppUser>(): angular.IPromise<Triarc.Data.DataResponse<TAppUser>>;
     }
     interface ILoginViewModel {
         username: string;
@@ -28,11 +28,11 @@ declare module Triarc.Auth {
         private applicationUrl;
         static serviceId: string;
         private static authKey;
-        _userDeferred: ng.IDeferred<TAppUser>;
-        constructor($http: ng.IHttpService, $q: ng.IQService, $proxy: IAuthProxy, $rootScope: ng.IRootScopeService, applicationUrl: string);
-        login(userName: string, password: string): ng.IPromise<TAppUser>;
+        _userDeferred: angular.IDeferred<TAppUser>;
+        constructor($http: angular.IHttpService, $q: angular.IQService, $proxy: IAuthProxy, $rootScope: angular.IRootScopeService, applicationUrl: string);
+        login(userName: string, password: string): angular.IPromise<TAppUser>;
         logout(): void;
-        getUser(): ng.IPromise<TAppUser>;
+        getUser(): angular.IPromise<TAppUser>;
         _currentUser: TAppUser;
     }
 }

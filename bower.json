@@ -1,10 +1,9 @@
 {
   "name": "cirrus-tlAuth",
   "version": "0.0.6",
-  "authors": [
-    "Marco Bachmann <mb@triarc-labs.com>"
+  "main": [
+    "tlAuth.js"
   ],
-  "main": "tlAuth.js",
   "moduleType": [
     "globals"
   ],
@@ -21,6 +20,6 @@
   },
   "endpoint": "https://github.com/triarc/cirrus-tlAuth.git",
   "dependencies": {
-    "cirrus-tlDataServices": "~0.0.18"
+    "cirrus-tlDataServices": "^0.0.18"
   }
 }
